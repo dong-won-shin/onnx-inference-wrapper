@@ -33,8 +33,13 @@ std::pair<cv::Mat, cv::Mat> preprocessKittiImagesForFlow(const cv::Mat& img1, co
     
     cv::Mat croppedImg1 = img1(cv::Rect(cropX, cropY, cropWidth, cropHeight));
     cv::Mat croppedImg2 = img2(cv::Rect(cropX, cropY, cropWidth, cropHeight));
+
+    cv::Mat resizedImg1;
+    cv::resize(croppedImg1, resizedImg1, cv::Size(TARGET_WIDTH, TARGET_HEIGHT), 0, 0, cv::INTER_LINEAR);
+    cv::Mat resizedImg2;
+    cv::resize(croppedImg2, resizedImg2, cv::Size(TARGET_WIDTH, TARGET_HEIGHT), 0, 0, cv::INTER_LINEAR);
     
-    return {croppedImg1, croppedImg2};
+    return {resizedImg1, resizedImg2};
 }
 
 int main() {
@@ -77,7 +82,7 @@ int main() {
             // Display cropped images
             cv::Mat concatCroppedImg;
             cv::hconcat(croppedImg1, croppedImg2, concatCroppedImg);
-            cv::imshow("Cropped Images (1000x375)", concatCroppedImg);
+            cv::imshow("Preprocessed Images", concatCroppedImg);
             
             // Run FlowNets inference (model will resize internally)
             cv::Mat flownetsFlow = flownetsWrapper.infer(croppedImg1, croppedImg2);
