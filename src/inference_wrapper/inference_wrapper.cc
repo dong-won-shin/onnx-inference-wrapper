@@ -1,4 +1,4 @@
-#include "InferenceWrapper.h"
+#include "inference_wrapper/inference_wrapper.h"
 
 InferenceWrapper::InferenceWrapper() 
     : isInitialized_(false), inputHeight_(0), inputWidth_(0) {

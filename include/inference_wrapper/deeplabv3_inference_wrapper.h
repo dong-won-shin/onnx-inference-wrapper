@@ -2,7 +2,7 @@
 #define DEEPLABV3_INFERENCE_WRAPPER_H
 
 #include <array>
-#include "InferenceWrapper.h"
+#include "inference_wrapper.h"
 
 class DeepLabV3InferenceWrapper : public InferenceWrapper {
 public:

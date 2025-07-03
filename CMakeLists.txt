@@ -24,10 +24,10 @@ include_directories(${EIGEN3_INCLUDE_DIRS})
 link_directories(${ONNXRUNTIME_DIR}/lib)
 
 # Set executable and link libraries
-add_library(onnx_helper src/OnnxHelper.cc)
-add_library(inference_wrapper src/InferenceWrapper.cc)
-add_library(deeplabv3_wrapper src/DeepLabV3InferenceWrapper.cc)
-add_library(flownets_wrapper src/FlowNetsInferenceWrapper.cc)
+add_library(onnx_helper src/onnx_helper.cc)
+add_library(inference_wrapper src/inference_wrapper/inference_wrapper.cc)
+add_library(deeplabv3_wrapper src/inference_wrapper/deeplabv3_inference_wrapper.cc)
+add_library(flownets_wrapper src/inference_wrapper/flownets_inference_wrapper.cc)
 
 add_executable(deeplabv3_inference_example src/examples/deeplabv3_inference_example.cpp)
 add_executable(flownets_inference_example src/examples/flownets_inference_example.cpp)

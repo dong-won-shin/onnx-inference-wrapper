@@ -1,4 +1,4 @@
-#include "DeepLabV3InferenceWrapper.h"
+#include "inference_wrapper/deeplabv3_inference_wrapper.h"
 
 // Cityscapes train_id to color map (BGR for OpenCV)
 const std::array<cv::Vec3b, 20> DeepLabV3InferenceWrapper::cityscapesTrainIdToColor_ = {{

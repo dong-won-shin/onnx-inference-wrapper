@@ -2,7 +2,7 @@
 #include <string>
 #include <opencv2/opencv.hpp>
 
-#include "FlowNetsInferenceWrapper.h"
+#include "inference_wrapper/flownets_inference_wrapper.h"
 
 const std::string modelDir = std::string(PROJECT_ROOT_DIR) + "/model";
 const std::string dataDir = std::string(PROJECT_ROOT_DIR) + "/data";

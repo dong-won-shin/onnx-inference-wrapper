@@ -1,4 +1,4 @@
-#include "FlowNetsInferenceWrapper.h"
+#include "inference_wrapper/flownets_inference_wrapper.h"
 
 FlowNetsInferenceWrapper::FlowNetsInferenceWrapper() 
     : inputHeight_(0), inputWidth_(0), outputHeight_(0), outputWidth_(0) {

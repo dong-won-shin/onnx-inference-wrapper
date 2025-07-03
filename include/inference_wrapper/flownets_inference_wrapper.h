@@ -1,6 +1,6 @@
 #pragma once
 
-#include "InferenceWrapper.h"
+#include "inference_wrapper.h"
 #include <opencv2/opencv.hpp>
 
 /**
